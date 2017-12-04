@@ -1,0 +1,226 @@
+<!doctype html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>Activities - Lu String</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href="css/lustring.css" rel="stylesheet" type="text/css">
+
+    <link href="jquery-mobile/jquery.mobile.structure-1.3.0.min.css" rel="stylesheet" type="text/css">
+    <link href="jQueryAssets/jquery.ui.core.min.css" rel="stylesheet" type="text/css">
+    <link href="jQueryAssets/jquery.ui.theme.min.css" rel="stylesheet" type="text/css">
+    <link href="jQueryAssets/jquery.ui.button.min.css" rel="stylesheet" type="text/css">
+
+<script src="jquery-mobile/jquery.mobile-1.3.0.min.js"></script>
+<script src="jQueryAssets/jquery.ui-1.10.4.button.min.js"></script>
+<script type="text/javascript">
+	var t = setInterval("changeColor()",1000);
+	function changeColor()	{
+		var a = document.getElementById("needToChange").className;
+		
+		if(a=="type1")	{
+			document.getElementById("needToChange").className="type2";
+		}
+		else if(a=="type2")	{
+			document.getElementById("needToChange").className="type3";
+		}
+		else	{
+			document.getElementById("needToChange").className="type1";
+		}
+		
+	}
+	</script>
+	</head>
+	
+
+<body>
+
+<div data-role="page" id="page">
+								  <div data-role="content">
+	 <div class = "brand">Lu String</div>
+    <div class = "address-bar"> The Best Chinese Style BBQ in Boston</div>
+
+    <!-- Navigation -->
+    <nav class = "navbar navbar-default" role = "navigation">
+        <div class = "container-fluid">
+           
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class = "navbar-header">
+                <button type = "button" class = "navbar-toggle" data-toggle = "collapse" data-target = "#bs-example-navbar-collapse-1">
+                    <span class = "sr-only">Toggle navigation</span>
+                    <span class = "icon-bar"></span>
+                    <span class = "icon-bar"></span>
+                    <span class = "icon-bar"></span>
+                    
+                </button>
+                <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
+                <a class = "navbar-brand" href = "index.html">Lu String Barbecue Bar&amp;Kitchen</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class = "collapse navbar-collapse" id = "bs-example-navbar-collapse-1">
+                <ul class = "nav navbar-nav">
+                    <li>
+                        <a href = "index.html">Home</a>
+                    </li>
+                    
+                    <li>
+                        <a href = "stores.html">Stores</a>
+                    </li>
+                    
+                    <li class="active">
+                        <a href = "#">Activities</a>
+                    </li>
+                    
+                    <li >
+                        <a href = "menu.html">Menu</a>
+                    </li>
+					
+					<li>
+                        <a href = "moments.html">Moments</a>
+                    </li>
+                    
+                    <li class=" dropdown" >
+						<a  href="#" class="dropdown-toggle" data-toggle="dropdown">Contact<span class="caret"></span></a>
+                   			<ul  class="dropdown-menu">
+								<li><a href="contactList.html">Contact List</a></li>
+								<li><a href="suggestionForm.html">suggestions</a></li>
+						</ul>
+                    </li>
+                </ul>
+                
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+	
+       <div class="container">
+		   <div class = "row">
+				<div class = "box">
+					<div class = "col-lg-12 text-center">
+						<h2 class = "brand-before">
+							<small>Wonderful</small>
+						</h2>
+						<h1 class = "brand-name">Activities</h1>
+						<hr class = "tagline-divider">
+						<h2>
+							<small>For
+								<strong>WonderfulEaters</strong>
+							</small>
+						</h2>
+					</div>
+				</div>
+			</div>
+	   
+		  <div class="box"> 
+		   	<div class="row">
+		      <div class="col-lg-12 ">
+				    <hr>
+                    <h3 class="text-center">Manager Words</h3>
+                    <hr>
+				    <p>What should our manager say? I do not know. See details, please click <a href="#"><small>more...</small></a></p>
+			   </div>
+			  </div>
+			</div>
+			 
+		   <div class="box">
+			  <div class="row">
+				  <div class="col-lg-12">
+				    <hr>
+                    <h3 class="text-center">Recent news</h3>
+                    <hr>
+					  <table  border="1" class="table table-striped ">
+  <tbody>
+    <tr >
+      <th scope="col" width="500px">China</th>
+      <th scope="col" width="500px">USA</th>
+    </tr>
+    <tr>
+		<td>Dance Night! <strong>Last Thursday is out monthly dance night. Welcome to join us!</strong></td>
+		<td>Market Week <strong>This Annual market week is successfully held in Beijing. All products are sold and all revenue will go directly to charity!</strong></td>
+    </tr>
+    <tr>
+		<td>Foodie Lovers Celebration <strong>Aug 22nd is Ke's birthday. On that day, everyone can come to share their favourite food in every store!</strong></td>
+		<td>Market Week <strong>This Annual market week is successfully held in Boston. All products are sold and all revenue will go directly to charity!</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+					  </div>
+				  </div>
+			  </div>
+			  
+			<div class="box">
+            <div class="row">
+                <div class="col-lg-12">
+				<hr>
+					<h3 id="needToChange" class="type1 text-center">Chrismas Specialty</h3>
+					<hr>
+           		  <div class="row">
+					  <div class="col-lg-4 col-md-12"><img alt="food1" src="img/bbq_1.jpg" class="img-responsive img-circle"><p class="text-center">New:Meat Combo! <a style="color: red;"> <strong>ONLY</strong></a> $10.00</p></div>
+               		  <div class="col-lg-4 col-md-12"><img alt="food2" src="img/bbq_13.jpg" style="height: 235px;" class="img-circle img-responsive"><p class="text-center">New:Bread and Meat Combo! <a style="color: red;"> <strong>ONLY</strong></a> $8.00</p></div>
+               		  <div class="col-lg-4 col-md-12"><img alt="food3" src="img/bbq_9.jpg" class="img-circle img-responsive"><p class="text-center">New:Lamb String! <a style="color: red;"> <strong>ONLY</strong></a> $3.00/ea</p></div>
+           		  </div>
+                </div>
+            </div>
+          </div>
+		  </div>
+       </div>
+<footer>
+      <div class = "container">
+            <div class = "row">
+                <div class = "col-lg-12 text-center">
+					<div class="plain_Navs text-center">
+						<section class="col-md-3 col-xs-0">
+						</section>
+						
+						<section class="col-md-1 col-sm-2 col-xs-6 text-center">
+							<a href="index.html">Home</a>
+						</section>
+				
+						<section class="col-md-1 col-sm-2 col-xs-6 text-center">
+							<a href="stores.html">Stores</a>
+						</section>
+				
+						<section class="col-md-1 col-sm-2 col-xs-6  text-center">
+							<a href="activities.html">Activities</a>
+						</section>
+						
+						<section class="col-md-1 col-sm-2 col-xs-6  text-center">
+							<a href="menu.html">Menu</a>
+						</section>
+				
+						<section class="col-md-1 col-sm-2 col-xs-6  text-center">
+							<a href="moments.html">Moments</a>
+						</section>
+				
+						<section class="col-md-1 col-sm-2 col-xs-6  text-center">
+							<a href="#" class="dropdown" data-toggle="dropdown">Contact</a>
+							<ul class="dropdown-menu">
+								<li><a href="contactList.html">Contact List</a></li>
+								<li><a href="suggestionForm.html">suggestions</a></li>
+						</ul>
+						</section>
+						
+						<section class="col-xs-0  col-md-3">
+						</section>
+					</div>
+                    <p>Copyright &copy;Lu String 2016</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    </div>
+</div>
+</body>
+</html>

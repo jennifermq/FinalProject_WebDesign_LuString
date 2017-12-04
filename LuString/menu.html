@@ -1,0 +1,512 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>Menu - Lu String</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href="css/lustring.css" rel="stylesheet" type="text/css">
+
+    <link href="jquery-mobile/jquery.mobile.structure-1.3.0.min.css" rel="stylesheet" type="text/css">
+    <link href="jQueryAssets/jquery.ui.core.min.css" rel="stylesheet" type="text/css">
+    <link href="jQueryAssets/jquery.ui.theme.min.css" rel="stylesheet" type="text/css">
+    <link href="jQueryAssets/jquery.ui.button.min.css" rel="stylesheet" type="text/css">
+
+<script src="jquery-mobile/jquery.mobile-1.3.0.min.js"></script>
+<script src="jQueryAssets/jquery.ui-1.10.4.button.min.js"></script>
+</head>
+
+<body>
+<div data-role="page" id="page">
+								  <div data-role="content">
+	 <div class = "brand">Lu String</div>
+    <div class = "address-bar"> The Best Chinese Style BBQ in Boston</div>
+
+    <!-- Navigation -->
+    <nav class = "navbar navbar-default" role = "navigation">
+        <div class = "container-fluid">
+           
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class = "navbar-header">
+                <button type = "button" class = "navbar-toggle" data-toggle = "collapse" data-target = "#bs-example-navbar-collapse-1">
+                    <span class = "sr-only">Toggle navigation</span>
+                    <span class = "icon-bar"></span>
+                    <span class = "icon-bar"></span>
+                    <span class = "icon-bar"></span>
+                    
+                </button>
+                <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
+                <a class = "navbar-brand" href = "index.html">Lu String Barbecue Bar&amp;Kitchen</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class = "collapse navbar-collapse" id = "bs-example-navbar-collapse-1">
+                <ul class = "nav navbar-nav">
+                    <li>
+                        <a href = "index.html">Home</a>
+                    </li>
+                    
+                    <li>
+                        <a href = "stores.html">Stores</a>
+                    </li>
+                    
+                    <li>
+                        <a href = "activities.html">Activities</a>
+                    </li>
+                    
+                    <li class="active">
+                        <a href = "#">Menu</a>
+                    </li>
+					
+					<li>
+                        <a href = "moments.html">Moments</a>
+                    </li>
+                    
+                    <li class=" dropdown" >
+						<a  href="#" class="dropdown-toggle" data-toggle="dropdown">Contact<span class="caret"></span></a>
+                   			<ul  class="dropdown-menu">
+								<li><a href="contactList.html">Contact List</a></li>
+								<li><a href="suggestionForm.html">suggestions</a></li>
+						</ul>
+                    </li>
+                </ul>
+                
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <div class = "container">
+
+        <div class = "row">
+            <div class = "box">
+                <div class = "col-lg-12 text-center">
+					<h2 class = "brand-before">
+                        <small>Wonderful</small>
+                    </h2>
+					<h1 class = "brand-name">Menu  <p style="color: red; font-style: italic;font-family: Lucida Grande, Lucida Sans Unicode, Lucida Sans, DejaVu Sans, Verdana,' sans-serif';font-size: 18px"><strong>Support Ordering Online!</strong><small>cash only</small></p></h1>
+                    <hr class = "tagline-divider">
+                    <h2>
+                        <small>For
+                            <strong>WonderfulEaters</strong>
+                        </small>
+                    </h2>
+					<div>
+					  <button id="addToCart1" class="addBtn btn btn-primary" type="submit">Submit</button>
+					  <button id="Clear1" class="clearBtn btn btn-warning">Clear</button>
+                    </div>
+					
+					<div class = "col-md-6 col-sm-12 text-center">
+						<h4 class = "intro-text text-center">Appetizer</h4>
+                   	  <hr class = "tagline-divider"><br>
+						<table class="text-center table table-responsive table-hover" id="appetizer-table">
+							<thead>
+								<tr>
+								<td>Name</td>
+								<td>Price</td>
+								<td width="50px">Order Quantity</td>
+								</tr>
+							</thead>
+							
+							
+							
+						  <tr >
+								<td>Appetizer 1</td>
+							  <td >1.00</td>
+								<td><input id="i1" name="appInput1" type="number" style="width: 50px; height: 30px;"/></td>
+						  </tr>
+							<tr>
+								<td>Appetizer 2</td>
+								<td id="p2">1.00</td>
+								<td><input id="i2" name="appInput2" type="number" style="height: 30px;"/></td>
+							</tr>
+							<tr>
+								<td>Appetizer 3</td>
+								<td id="p3">1.00</td>
+								<td><input id="i3" name="appInput3" type="number" style="height: 30px;"/></td>
+							</tr>
+							<tr>
+								<td>Appetizer 4</td>
+								<td id="p37">1.00</td>
+								<td><input id="i37" name="appInput4" type="number" style="height: 30px;"/></td>
+							</tr>
+						</table><br>
+						
+						<h4 class = "intro-text text-center">Vegetables</h4>
+                    	<hr class = "tagline-divider"><br>
+						<table class="text-center table table-responsive table-hover" id="vegetable-table">
+							<thead>
+								<tr>
+								<td>Name</td>
+								<td>Price</td>
+								<td width="50px">Order Quantity</td>
+								</tr>
+							</thead>
+							<tr>
+								<td>Vege 1</td>
+								<td id="p4">1.00</td>
+								<td><input name="vegeInput1" type="number" style="height: 30px;" id="i4"/></td>
+							</tr>
+							<tr>
+								<td>Vege 2</td>
+								<td id="p5">1.00</td>
+								<td><input name="vegeInput2" type="number" style="height: 30px;" id="i5"/></td>
+							</tr>
+							<tr>
+								<td>Vege 3</td>
+								<td id="p6">1.00</td>
+								<td><input name="vegeInput3" type="number" style="height: 30px;" id="i6"/></td>
+							</tr>
+							<tr>
+								<td>Vege 4</td>
+								<td id="p7">1.00</td>
+								<td><input name="vegeInput4" type="number" style="height: 30px;" id="i7"/></td>
+							</tr>
+							<tr>
+								<td>Vege 5</td>
+								<td id="p8">1.00</td>
+								<td><input name="vegeInput5" type="number" style="height: 30px;" id="i8"/></td>
+							</tr>
+							<tr>
+								<td>Vege 6</td>
+								<td id="p9">1.00</td>
+								<td><input name="vegeInput6" type="number" style="height: 30px;" id="i9"/></td>
+							</tr>
+							<tr>
+								<td>Vege 7</td>
+								<td id="p10">1.00</td>
+								<td><input name="vegeInput7" type="number" style="width: 50px; height: 30px;" id="i10"/></td>
+							</tr>
+							<tr>
+								<td>Vege 8</td>
+								<td id="p11">1.00</td>
+								<td><input name="vegeInput8" type="number" style="height: 30px;" id="i11"/></td>
+							</tr>
+						</table><br>
+						
+						<h4 class = "intro-text text-center">Drinks</h4>
+                    	<hr class = "tagline-divider"><br>
+						<table class="text-center table table-responsive table-hover" id="drinks-table">
+							<thead>
+								<tr>
+								<td>Name</td>
+								<td>Price</td>
+								<td width="50px">Order Quantity</td>
+								</tr>
+							</thead>
+							<tr>
+								<td>Drink 1</td>
+								<td id="p12">1.00</td>
+								<td><input name="drinkInput1" type="number" style="height: 30px;" id="i12"/></td>
+							</tr>
+							<tr>
+								<td>Drink 2</td>
+								<td id="p13">1.00</td>
+								<td><input name="drinkInput2" type="number" style="height: 30px;" id="i13"/></td>
+							</tr>
+							<tr>
+								<td>Drink 3</td>
+								<td id="p14">1.00</td>
+								<td><input name="drinkInput3" type="number" style="height: 30px;" id="i14"/></td>
+							</tr>
+							<tr>
+								<td>Drink 4</td>
+								<td id="p15">1.00</td>
+								<td><input name="drinkInput4" type="number" style="height: 30px;" id="i15"/></td>
+							</tr>
+							<tr>
+								<td>Drink 5</td>
+								<td id="p16">1.00</td>
+								<td><input name="drinkInput5" type="number" style="height: 30px;" id="i16"/></td>
+							</tr>
+							<tr>
+								<td>Drink 6</td>
+								<td id="p17">1.00</td>
+								<td><input name="drinkInput6" type="number" style="height: 30px;" id="i17"/></td>
+							</tr>
+							<tr>
+								<td>Drink 7</td>
+								<td id="p18">1.00</td>
+								<td><input name="drinkInput7" type="number" style="height: 30px;" id="i18"/></td>
+							</tr>
+							<tr>
+								<td>Drink 8</td>
+								<td id="p19">1.00</td>
+								<td><input name="drinkInput8" type="number" style="width: 50px; height: 30px;" id="i19"/></td>
+							</tr>
+						</table>
+					</div>
+					<div class = "col-md-6 col-sm-12 text-center">
+						<h4 class = "intro-text text-center">Soup</h4>
+                    	<hr class = "tagline-divider"><br>
+						<table class="text-center table table-responsive table-hover" id="soup-table">
+							<thead>
+								<tr>
+								<td>Name</td>
+								<td>Price</td>
+								<td width="50px">Order Quantity</td>
+								</tr>
+							</thead>
+							<tr>
+								<td>Soup 1</td>
+								<td id="p20">1.00</td>
+								<td><input name="soupInput1" type="number" style="height: 30px;" id="i20"/></td>
+							</tr>
+							<tr>
+								<td>Soup 2</td>
+								<td id="p21">1.00</td>
+								<td><input name="soupInput2" type="number" style="height: 30px;" id="i21"/></td>
+							</tr>
+							<tr>
+								<td>Soup 3</td>
+								<td id="p22">1.00</td>
+								<td><input name="soupInput3" type="number" style="height: 30px;" id="i22"/></td>
+							</tr>
+							<tr>
+								<td>Soup 4</td>
+								<td id="p23">1.00</td>
+								<td><input name="soupInput4" type="number" style="width: 50px; height: 30px;" id="i23"/></td>
+							</tr>
+						</table><br>
+						<h4 class = "intro-text text-center">Meat</h4>
+                    	<hr class = "tagline-divider"><br>
+						<table class="text-center table table-responsive table-hover" id="meat-table">
+							<thead>
+								<tr>
+								<td>Name</td>
+								<td>Price</td>
+								<td width="50px">Order Quantity</td>
+								</tr>
+							</thead>
+							<tr>
+								<td>Meat 1</td>
+								<td id="p24">1.00</td>
+								<td><input name="meatInput1" type="number" style="height: 30px;" id="i24"/></td>
+							</tr>
+							<tr>
+								<td>Meat 2</td>
+								<td id="p25">1.00</td>
+								<td><input name="meatInput2" type="number" style="height: 30px;" id="i25"/></td>
+							</tr>
+							<tr>
+								<td>Meat 3</td>
+								<td id="p26">1.00</td>
+								<td><input name="meatInput3" type="number" style="height: 30px;" id="i26"/></td>
+							</tr>
+							<tr>
+								<td>Meat 4</td>
+								<td id="p27">1.00</td>
+								<td><input name="meatInput4" type="number" style="height: 30px;" id="i27"/></td>
+							</tr>
+							<tr>
+								<td>Meat 5</td>
+								<td id="p28">1.00</td>
+								<td><input name="meatInput5" type="number" style="height: 30px;" id="i28"/></td>
+							</tr>
+							<tr>
+								<td>Meat 6</td>
+								<td id="p29">1.00</td>
+								<td><input name="meatInput6" type="number" style="height: 30px;" id="i29"/></td>
+							</tr>
+							<tr>
+								<td>Meat 7</td>
+								<td id="p30">1.00</td>
+								<td><input name="meatInput8" type="number" style="height: 30px;" id="i30"/></td>
+							</tr>
+							<tr>
+								<td>Meat 8</td>
+								<td id="p31">1.00</td>
+								<td><input name="meatInput9" type="number" style="width: 50px; height: 30px;" id="i31"/></td>
+							</tr>
+						</table><br>
+						<h4 class = "intro-text text-center">toast bread & others</h4>
+                    	<hr class = "tagline-divider"><br>
+						<table class="text-center table table-responsive table-hover" id="others-table">
+							<thead>
+								<tr>
+								<td>Name</td>
+								<td>Price</td>
+								<td width="50px">Order Quantity</td>
+								</tr>
+							</thead>
+							<tr>
+								<td>Other 1</td>
+								<td id="p32">1.00</td>
+								<td><input name="othersInput1" type="number" style="height: 30px;" id="i32"/></td>
+							</tr>
+							<tr>
+								<td>Other 2</td>
+								<td id="p33">1.00</td>
+								<td><input name="othersInput2" type="number" style="height: 30px;" id="i33"/></td>
+							</tr>
+							<tr>
+								<td>Other 3</td>
+								<td id="p34">1.00</td>
+								<td><input name="othersInput3" type="number" style="height: 30px;" id="i34"/></td>
+							</tr>
+							<tr>
+								<td>Other 4</td>
+								<td id="p35">1.00</td>
+								<td><input name="othersInput4" type="number" style="height: 30px;" id="i35"/></td>
+							</tr>
+							<tr>
+								<td>Other 5</td>
+								<td id="p36">1.00</td>
+								<td><input name="othersInput5" type="number" style="width: 50px; height: 30px;" id="i36"/></td>
+							</tr>
+							
+						</table>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="addBtn btn btn-primary" name="addToCart2">Submit</button>
+						<button type="button" class="clearBtn btn btn-warning" name="clear2">Clear</button>
+					
+					</div>	
+				  
+                </div>
+                
+            </div>
+            
+        </div>
+        
+    </div>
+    <!-- /.container -->
+
+    <footer>
+        <div class = "container">
+            <div class = "row">
+                <div class = "col-lg-12 text-center">
+					<div class="plain_Navs text-center">
+						<section class="col-md-3 col-xs-0">
+						</section>
+						
+						<section class="col-md-1 col-sm-2 col-xs-6 text-center">
+							<a href="index.html">Home</a>
+						</section>
+				
+						<section class="col-md-1 col-sm-2 col-xs-6 text-center">
+							<a href="stores.html">Stores</a>
+						</section>
+				
+						<section class="col-md-1 col-sm-2 col-xs-6  text-center">
+							<a href="activities.html">Activities</a>
+						</section>
+						
+						<section class="col-md-1 col-sm-2 col-xs-6  text-center">
+							<a href="menu.html">Menu</a>
+						</section>
+				
+						<section class="col-md-1 col-sm-2 col-xs-6  text-center">
+							<a href="moments.html">Moments</a>
+						</section>
+				
+						<section class="col-md-1 col-sm-2 col-xs-6  text-center">
+							<a href="#" class="dropdown" data-toggle="dropdown">Contact</a>
+							<ul class="dropdown-menu">
+								<li><a href="contactList.html">Contact List</a></li>
+								<li><a href="suggestionForm.html">suggestions</a></li>
+						</ul>
+						</section>
+						
+						<section class="col-xs-0  col-md-3">
+						</section>
+					</div>
+                    <p>Copyright &copy;Lu String 2016</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    </div>
+</div>
+<script type="text/javascript">
+	var data = [{name:"Appetizer1",price:3.75,id:1},
+			   {name:"Appetizer2",price:1,id:2},
+			   {name:"Appetizer3",price:1,id:3},
+			   
+			   {name:"Vege1",price:1,id:4},
+				{name:"Vege2",price:1,id:5},
+				{name:"Vege3",price:1,id:6},
+				{name:"Vege4",price:1,id:7},
+				{name:"Vege5",price:1,id:8},
+				{name:"Vege6",price:1,id:9},
+				{name:"Vege7",price:1,id:10},
+				{name:"Vege8",price:1,id:11},
+			   {name:"Drink1",price:1,id:12},
+			   {name:"Drink2",price:1,id:13},
+				{name:"Drink3",price:1,id:14},
+				{name:"Drink4",price:1,id:15},
+				{name:"Drink5",price:1,id:16},
+				{name:"Drink6",price:1,id:17},
+				{name:"Drink7",price:1,id:18},
+				{name:"Drink8",price:1,id:19},
+				{name:"Soup1",price:1,id:20},
+				{name:"Soup2",price:1,id:21},
+				{name:"Soup3",price:1,id:22},
+				{name:"Soup4",price:1,id:23},
+				{name:"Meat1",price:1,id:24},
+				{name:"Meat2",price:1,id:25},
+				{name:"Meat3",price:1,id:26},
+				{name:"Meat4",price:1,id:27},
+				{name:"Meat5",price:1,id:28},
+				{name:"Meat6",price:1,id:29},
+				{name:"Meat7",price:1,id:30},
+				{name:"Meat8",price:1,id:31},
+				{name:"Other1",price:1,id:32},
+				{name:"Other2",price:1,id:33},
+				{name:"Other3",price:1,id:34},
+				{name:"Other4",price:1,id:35},
+				{name:"Other5",price:1,id:36},
+			   {name:"Appetizer4",price:1,id:37}];
+	var orderID = 0;
+	$(".clearBtn").click(function()	{
+		$("input").val("");
+	});
+	$(".addBtn").click(function()	{
+		var a =0;
+		var b = new Array(null); 
+		var c = new Array(null);
+		var count = 0;
+		var userName = prompt("Your name");
+		for(var k =1;k<38;k++)	{
+			if($("#i"+k).val()>=0&&$("#i"+k).val()!="")	{
+				c[count]=$("#i"+k).val();
+				b[count++] = data[k-1].name;
+				
+				a=a+$("#i"+k).val()*data[k-1].price;
+				
+			}
+		}
+		
+		if(userName!=null&&userName!="")	{
+		$("input").val("");
+		alert("Submission succeed!");
+		document.write("<h1>Your Order </h1><h3>name: "+userName+"</h3><table border=0><tbody>");
+		for(var k=0;k<count;k++)	{
+			document.write("<tr><td>"+b[k]+"</td><td>"+c[k]+"</td></tr>");
+		}
+		var floatPrice= parseFloat(a);
+		floatPrice = floatPrice.toFixed(2);
+		document.write("</tbody></table><p>You should pay: $"+floatPrice+"</p><a href='menu.html' >Back</a>");
+		orderID++;
+		}
+		else	{
+			alert("Please input a valid name!");
+			
+			
+		}
+		
+	});
+	
+	</script>
+
+</body>
+</html>

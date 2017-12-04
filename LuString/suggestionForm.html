@@ -1,0 +1,311 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset = "utf-8">
+
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+
+	<title>Welcome to Lu String Bar</title>
+	
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js"></script>
+<script src="jQueryAssets/jquery-1.11.1.min.js"></script>
+<script src="jQueryAssets/jquery.ui-1.10.4.button.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link href = "css/lustring.css" rel = "stylesheet">
+
+    <!-- Fonts -->
+    <link href = "https://fonts.googleapis.com/css?family = Open + Sans: 300italic, 400italic, 600italic, 700italic, 800italic, 400, 300, 600, 700, 800" rel = "stylesheet" type = "text/css">
+    <link href = "https://fonts.googleapis.com/css?family = Josefin + Slab: 100, 300, 400, 600, 700, 100italic, 300italic, 400italic, 600italic, 700italic" rel = "stylesheet" type = "text/css">
+    <link href="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.css" rel="stylesheet" type="text/css">
+    <link href="jQueryAssets/jquery.ui.core.min.css" rel="stylesheet" type="text/css">
+    <link href="jQueryAssets/jquery.ui.theme.min.css" rel="stylesheet" type="text/css">
+    <link href="jQueryAssets/jquery.ui.button.min.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+		function isNull( str ){
+if ( str == "" ) return true;
+var regu = "^[ ]+$";
+var re = new RegExp(regu);
+return re.test(str);
+}
+function isNumber(str){
+		var s = /^[0-9]*$/;
+		return s.test(str);
+}
+function isEmail(str){
+  var reg = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((.[a-zA-Z0-9_-]{2,3}){1,2})$/;
+  return reg.test(str);
+}
+	function submit()	{
+	var name = document.getElementById("nameinput").value;
+	var tel = document.getElementById("telinput").value;
+	var email = document.getElementById("email").value;
+	var comment = document.getElementById("textarea").value;
+	if(isNull(name)==true||name.match(/\d+/g))	{
+		alert("invalid name, please check!");
+	}
+	else	{
+		if(isNumber(tel)==false||isNull(tel)==true||tel.length!=10)	{
+			alert("invalid telephone number, please check!");
+		}
+		else	{
+			if(isNull(email)==true||isEmail(email)==false)	{
+				alert("invalid email, please check!");
+			}
+			else{
+				if(isNull(comment)==true)	{
+					alert("invalid comment, please check!");
+				}
+				else	{
+					alert("Thank you "+name+", xxxx!");
+				}
+			
+			}
+		}
+	}
+	}
+	
+	
+	
+	
+	
+</script>
+
+
+</head>
+
+
+
+<body>
+	 <div class = "brand">Lu String</div>
+    <div class = "address-bar"> The Best Chinese Style BBQ in Boston</div>
+
+    <!-- Navigation -->
+    <nav class = "navbar navbar-default" role = "navigation">
+        <div class = "container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class = "navbar-header">
+                <button type = "button" class = "navbar-toggle" data-toggle = "collapse" data-target = "#bs-example-navbar-collapse-1">
+                    <span class = "sr-only">Toggle navigation</span>
+                    <span class = "icon-bar"></span>
+                    <span class = "icon-bar"></span>
+                    <span class = "icon-bar"></span>
+                </button>
+                <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
+                <a class = "navbar-brand" href = "index.html">Lu String Barbecue Bar&amp;Kitchen</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class = "collapse navbar-collapse" id = "bs-example-navbar-collapse-1">
+                <ul class = "nav navbar-nav">
+                    <li >
+                        <a href = "index.html">Home</a>
+                    </li>
+                    
+                    <li>
+                        <a href = "stores.html">Stores</a>
+                    </li>
+                    
+                    <li>
+                        <a href = "activities.html">Activities</a>
+                    </li>
+                    
+                    <li>
+                        <a href = "menu.html">Menu</a>
+                    </li>
+					
+					<li>
+                        <a href = "moments.html">Moments</a>
+                    </li>
+                    
+                    <li class="active dropdown" >
+						<a  href="#" class="dropdown-toggle" data-toggle="dropdown">Contact<span class="caret"></span></a>
+                   			<ul  class="dropdown-menu">
+								<li><a href="contactList.html">Contact List</a></li>
+								<li><a href="#">suggestions</a></li>
+						</ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- /.container -->
+    <div class="container" >
+    	<div class="box">
+		  <div class="row">
+			  <div class="col-lg-12 text-center">
+			    <div data-role="page" id="page">
+			      <div data-role="header text-center">
+			        <h1 style="font-family: Constantia, Lucida Bright, DejaVu Serif, Georgia, serif;">^together we improve^</h1>
+		          </div>
+			      <div data-role="content">
+			        <div data-role="fieldcontain">
+			          <label for="textinput2">Name:</label>
+			          <input type="text" name="textinput2" id="nameinput" value=""  />
+		            </div>
+			        <div data-role="fieldcontain">
+			          <label for="textinput">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tel:</label>
+			          <input type="tel " name="textinput" id="telinput" value=""  placeholder="numbers only"/>
+		            </div>
+			        <div data-role="fieldcontain">
+			          <label for="email">   Email:</label>
+			          <input type="email" name="email" id="email" value=""  placeholder="xx@xx.xx"/>
+		            </div>
+			        <div data-role="fieldcontain">
+			          <label for="textarea">Comment:</label>
+			          <textarea cols="40" rows="8" name="textarea" id="textarea"></textarea>
+		            </div>
+			        <div data-role="fieldcontain">
+			          <fieldset data-role="controlgroup" data-type="horizontal">
+						  <label>Have you been shopped with us?</label>
+			            <input type="radio" name="oldCustomer" id="oldCustomer_Yes" value="" />
+			            <label for="oldCustomer_0">Yes</label>
+			            <input type="radio" name="oldCustomer" id="oldCustomer_No" value="" />
+			            <label for="oldCustomer_1">No</label>
+		              </fieldset>
+		            </div>
+			        <div data-role="fieldcontain">
+			          <fieldset class="hidden1" data-role="controlgroup" data-type="horizontal" >
+			            <label>What do you think of our service?</label>
+			            <input type="radio" name="serviceGrade" id="serviceGrade_0" value="" />
+			            <label for="serviceGrade_0">Very Good</label>
+			            <input type="radio" name="serviceGrade" id="serviceGrade_1" value="" />
+			            <label for="serviceGrade_1">Good</label>
+			            <input type="radio" name="serviceGrade" id="serviceGrade_2" value="" />
+			            <label for="serviceGrade_2">Neutral</label>
+			            <input type="radio" name="serviceGrade" id="serviceGrade_3" value="" />
+			            <label for="serviceGrade_3">Bad</label>
+			            <input type="radio" name="serviceGrade" id="serviceGrade_4" value="" />
+			            <label for="serviceGrade_4">Very Bad</label>
+		              </fieldset>
+		            </div>
+		            			        <div data-role="fieldcontain">
+			          <fieldset class="hidden1" data-role="controlgroup" data-type="horizontal" >
+			            <label>What do you think of our food?&nbsp;"&nbsp;</label>
+			            <input type="radio" name="foodGrade" id="foodGrade_0" value="" />
+			            <label for="foodGrade_0">Very Good</label>
+			            <input type="radio" name="foodGrade" id="foodGrade_1" value="" />
+			            <label for="foodGrade_1">Good</label>
+			            <input type="radio" name="foodGrade" id="foodGrade_2" value="" />
+			            <label for="foodGrade_2">Neutral</label>
+			            <input type="radio" name="foodGrade" id="foodGrade_3" value="" />
+			            <label for="foodGrade_3">Bad</label>
+			            <input type="radio" name="foodGrade" id="foodGrade_4" value="" />
+			            <label for="foodGrade_4">Very Bad</label>
+		              </fieldset>
+		            </div>
+		             <div data-role="fieldcontain">
+			          <fieldset class="hidden1" data-role="controlgroup" data-type="horizontal">
+			            <label>What do you think of dining environment?</label>
+			            <input type="radio" name="environmentGrade" id="environmentGrade_0" value="" />
+			            <label for="environmentGrade_0">Very Good</label>
+			            <input type="radio" name="environmentGrade" id="environmentGrade_1" value="" />
+			            <label for="environmentGrade_1">Good</label>
+			            <input type="radio" name="environmentGrade" id="environmentGrade_2" value="" />
+			            <label for="environmentGrade_2">Neutral</label>
+			            <input type="radio" name="environmentGrade" id="environmentGrade_3" value="" />
+			            <label for="environmentGrade_3">Bad</label>
+			            <input type="radio" name="environmentGrade" id="environmentGrade_4" value="" />
+			            <label for="environmentGrade_4">Very Bad</label>
+		              </fieldset>
+		            </div>
+		            
+		            
+		            <div id="Buttonset1">
+		              <button id="submitBtn" class="btn btn-primary" onClick="submit();">Submit</button>
+		              <button id="clearBtn" class="btn btn-warning">Clear</button>
+
+	                </div>
+                  </div>
+		        </div>
+			  	
+			  </div>
+		  </div>
+        </div>
+</div>
+<footer>
+    <div class = "container">
+            <div class = "row">
+                <div class = "col-lg-12 text-center">
+					<div class="plain_Navs text-center">
+						<section class="col-md-3 col-xs-0">
+						</section>
+						
+						<section class="col-md-1 col-sm-2 col-xs-6 text-center">
+							<a href="index.html">Home</a>
+						</section>
+				
+						<section class="col-md-1 col-sm-2 col-xs-6 text-center">
+							<a href="stores.html">Stores</a>
+						</section>
+				
+						<section class="col-md-1 col-sm-2 col-xs-6  text-center">
+							<a href="activities.html">Activities</a>
+						</section>
+						
+						<section class="col-md-1 col-sm-2 col-xs-6  text-center">
+							<a href="menu.html">Menu</a>
+						</section>
+				
+						<section class="col-md-1 col-sm-2 col-xs-6  text-center">
+							<a href="moments.html">Moments</a>
+						</section>
+				
+						<section class="col-md-1 col-sm-2 col-xs-6 text-center dropdown">
+							<a  href="#" class="dropdown-toggle" data-toggle="dropdown">Contact</a>
+                   			<ul  class="dropdown-menu">
+								<li><a href="contactList.html">Contact List</a></li>
+								<li><a href="#">suggestions</a></li>
+							</ul>
+						</section>
+						
+						<section class="col-xs-0  col-md-3">
+						</section>
+					</div>
+                    <p>Copyright &copy;Lu String 2016</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+<script type="text/javascript">
+$(function() {
+	$( "#Buttonset1" ).buttonset(); 
+	$(".hidden1").hide();
+
+});
+$("#clearBtn").click(function()	{
+	$("input").val("");
+	$("textarea").val("");
+	$("input:checked").removeAttr("checked");
+
+});
+$('#oldCustomer_Yes').click(function()	{
+	if($('#oldCustomer_Yes').is(':checked')) {
+    $(".hidden1").show();
+}
+});
+$('#oldCustomer_No').click(function()	{
+	if($('#oldCustomer_No').is(':checked')) {
+    $(".hidden1").hide();
+}
+});
+
+
+
+
+
+
+</script>
+</body>
+</html>
