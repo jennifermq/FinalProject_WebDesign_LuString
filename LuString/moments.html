@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = "utf-8">
+<meta name = "viewport" content = "width = device-width, initial-scale = 1">
+<title>Welcome to Lu String Bar</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<!-- Bootstrap Core CSS -->
+    <link href = "css/bootstrap.min.css" rel = "stylesheet">
+    
+	<!-- Custom CSS -->
+    <link href = "css/lustring.css" rel = "stylesheet">
+    
+    <!-- Fonts -->
+    <link href = "https://fonts.googleapis.com/css?family = Open + Sans: 300italic, 400italic, 600italic, 700italic, 800italic, 400, 300, 600, 700, 800" rel = "stylesheet" type = "text/css">
+    <link href = "https://fonts.googleapis.com/css?family = Josefin + Slab: 100, 300, 400, 600, 700, 100italic, 300italic, 400italic, 600italic, 700italic" rel = "stylesheet" type = "text/css">
+    
+    <!-- Angular -->
+	<script>
+        var app = angular.module('addComment',[]);
+        
+        app.controller("UserController", function() {
+            this.userAccount = users;
+        });
+        
+        app.controller("AddController", function() {
+			this.userAccount = {};
+			
+			this.addUser = function(newUser) {
+				if(document.getElementById("comment").value == ""){
+					alert("Please enter your comment or feeling");
+				} else{
+					newUser.push(this.userAccount);
+					this.userAccount={};
+				}
+			};
+		});
+        
+        var users = [{
+            name:'001',
+            path:'img/bbq_6.jpg',
+            txt:'This toasted manto is fantastic!!!!!'
+        }, {
+            name:'002',
+            path:'img/bbq_8.jpg',
+            txt:'Shrimp is fresh as hell'
+        },{
+            name:'003',
+            path:'img/bbq_9.jpg',
+            txt:'New Orleans chciken feels so Orleans'
+        }, {
+            name:'004',
+            path:'img/bbq_10.jpg',
+            txt:'Tofu is good, and so is Lu String'
+        }];
+    </script>
+</head>
+
+<body ng-app="addComment">
+    <div class = "brand">Lu String</div>
+    <div class = "address-bar"> The Best Chinese Style BBQ in Boston</div>
+    
+    <!-- Navigation -->
+    <nav class = "navbar navbar-default" role = "navigation">
+        <div class = "container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class = "navbar-header">
+                <button type = "button" class = "navbar-toggle" data-toggle = "collapse" data-target = "#bs-example-navbar-collapse-1">
+                    <span class = "sr-only">Toggle navigation</span>
+                    <span class = "icon-bar"></span>
+                    <span class = "icon-bar"></span>
+                    <span class = "icon-bar"></span>
+                </button>
+                
+                <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
+                <a class = "navbar-brand" href = "index.html">Lu String Barbecue Bar&amp;Kitchen</a>
+            </div>
+            
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class = "collapse navbar-collapse" id = "bs-example-navbar-collapse-1">
+                <ul class = "nav navbar-nav">
+                    <li>
+                        <a href = "index.html">Home</a>
+                    </li>
+                    
+                    <li>
+                        <a href = "stores.html">Stores</a>
+                    </li>
+                    
+                    <li>
+                        <a href = "activities.html">Activities</a>
+                    </li>
+                    
+                    <li>
+                        <a href = "menu.html">Menu</a>
+                    </li>
+                    
+                    <li class="active">
+                        <a href = "#">Moments</a>
+                    </li>
+                    
+                    <li class=" dropdown" >
+						<a  href="#" class="dropdown-toggle" data-toggle="dropdown">Contact<span class="caret"></span></a>
+                   			<ul  class="dropdown-menu">
+								<li><a href="contactList.html">Contack List</a></li>
+								<li><a href="suggestionForm.html">suggestions</a></li>
+						</ul>
+                    </li>
+                </ul>
+            </div>
+        <!-- /.navbar-collapse -->
+        </div>
+    <!-- /.container -->
+    </nav>
+    
+    
+    <div class = "container" ng-controller="UserController as userCtrl" >
+        <div class = "box">
+        	<div class = "row">
+                <div class = "col-lg-12 text-center">
+                    <hr>
+                    <h2  class="intro-text text-center">Comment <strong>Gallery</strong></h2>
+                    <hr>
+                    
+                    <p>
+                        Your experience at Lu String is undoubtfully important to us.
+                        <br>Please feel free to drop some comments and feelings, pictures are extremely welcome!
+                    </p>
+                </div>
+            </div>
+            
+            <div class = "row">
+                <div class="col-xs-12" style="padding: 30px">
+                    <div ng-repeat="user in userCtrl.userAccount" class="thumbnail col-sm-6 col-xs-12" style="max-height: 350px">
+                        <div class="caption">
+                            <p class="text-center">{{user.name}}</p>
+                        </div>
+                        <img ng-src="{{user.path}}" style="max-width: 310px" alt = ""/>
+                        <div class="caption">
+                            <p style="overflow:auto; height: 50px" class="text-center">{{user.txt}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+                
+        <div class="row">
+            <div class="box">
+                <div class="col-lg-12 text-center">
+                    <hr>
+                    <h2 class="intro-text text-center">Write
+                        <strong>comment</strong>
+                    </h2>
+                    <hr>
+                    
+                    <p>
+                        Your experience at Lu String is undoubtfully important to us.<br>
+                        Please feel free to drop some comments and feelings, pictures are extremely welcome!
+                    </p>
+                    
+                    <form role="form" ng-controller="AddController as addCtrl" ng-submit="addCtrl.addUser(userCtrl.userAccount)">
+                        <div class="row">
+                            <div class="form-group col-lg-4">
+                                <label>Name</label>
+                                <input type="text" class="form-control" ng-model="addCtrl.userAccount.name"/>
+                            </div>
+                            
+                            <div class="form-group col-lg-4">
+                                <label>Email Address</label>
+                                <input type="email" class="form-control">
+                            </div>
+                            
+                            <div class="form-group col-lg-4">
+                                <label>Phone Number</label>
+                                <input type="tel" class="form-control">
+                            </div>
+                            
+                            <div class="form-group col-lg-12">
+                                <label>Comment</label>
+                                <textarea class="form-control" rows="6" ng-model="addCtrl.userAccount.txt" id="comment"></textarea>
+                            </div>
+                            
+                            <div class = "form-group col-lg-4" style="margin-left: 380px; display: inline">
+                                <label>Upload pitcure</label>
+                                <input type="pic" name="userPic" class="form-control" ng-model="addCtrl.userAccount.path" required />
+                            </div>
+                            
+                            <div class="clearfix"></div>
+                            
+                            <div class="form-group col-lg-12">
+                                <p style = "text-align: center"><button type="submit" class="btn btn-default">Submit</button></p>
+                            </div>
+                        </div>
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class = "container">
+            <div class = "row">
+                <div class = "col-lg-12 text-center">
+					<div class="plain_Navs text-center">
+						<section class="col-md-3 col-xs-0">
+						</section>
+						
+						<section class="col-md-1 col-sm-2 col-xs-6 text-center">
+							<a href="#">Home</a>
+						</section>
+				
+						<section class="col-md-1 col-sm-2 col-xs-6 text-center">
+							<a href="#">Stores</a>
+						</section>
+				
+						<section class="col-md-1 col-sm-2 col-xs-6  text-center">
+							<a href="#">Activities</a>
+						</section>
+						
+						<section class="col-md-1 col-sm-2 col-xs-6  text-center">
+							<a href="menu.html">Menu</a>
+						</section>
+				
+						<section class="col-md-1 col-sm-2 col-xs-6  text-center">
+							<a href="#">Moments</a>
+						</section>
+				
+						<section class="col-md-1 col-sm-2 col-xs-6 text-center dropdown">
+							<a  href="#" class="dropdown-toggle" data-toggle="dropdown">Contact</a>
+                   			<ul  class="dropdown-menu">
+								<li><a href="contactList.html">Contack List</a></li>
+								<li><a href="suggestionForm.html">suggestions</a></li>
+							</ul>
+						</section>
+						
+						<section class="col-xs-0  col-md-3">
+						</section>
+					</div>
+                    <p>Copyright &copy;Lu String 2016</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src = "js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src = "js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
